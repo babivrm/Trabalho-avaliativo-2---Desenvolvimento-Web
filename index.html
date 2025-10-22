@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo Moderno</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="quiz-container" id="quizContainer">
+        
+        <div id="startScreen">
+            <h1>Quiz de Desenvolvimento Web</h1>
+            <p>Este quiz possui 15 questões de múltipla escolha.</p>
+            <label for="userName">Seu Nome:</label>
+            <input type="text" id="userName" placeholder="Digite seu nome" required>
+            <button id="startQuizBtn" class="main-btn" disabled>Começar Quiz</button>
+        </div>
+
+        <div id="quizScreen" class="hidden">
+            <div class="progress-container">
+                <div id="progressText" class="progress-text">Pergunta 1 de 15</div>
+                <div id="progressBar" class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <h2 id="question">Pergunta aparecerá aqui.</h2>
+            <div id="answer-buttons" class="btn-grid">
+                </div>
+            <div id="feedback" class="feedback hidden"></div>
+            <button id="nextBtn" class="main-btn hidden">Próxima Pergunta</button>
+        </div>
+
+        <div id="resultScreen" class="hidden">
+            <h2>Resultados do Quiz</h2>
+            <p id="resultTextName"></p>
+            <p id="scoreText">Você acertou **X** de 15 perguntas.</p>
+            <p id="percentageText">Aproveitamento: **Y%**</p>
+            
+            <div id="performanceMessage" class="performance-message"></div>
+
+            <div class="chart-container">
+                <canvas id="performanceChart"></canvas>
+            </div>
+
+            <button id="restartBtn" class="main-btn">Reiniciar Quiz</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
